@@ -1,0 +1,85 @@
+1.
+package inheritance1;
+public class Animal {
+void eat(){
+	System.out.println("Eating");
+}
+void sleep(){
+	System.out.println("Sleeping");
+}
+}
+package inheritance1;
+public class Bird extends Animal{
+void fly(){
+	System.out.println("Flying");
+}
+}
+package inheritance1;
+public class Main {
+	public static void main(String[] args) {
+		Bird b=new Bird();
+		System.out.println("Child class");
+		b.fly();
+		b.eat();
+		b.sleep();
+		Animal a=new Animal();
+		System.out.println("Derived class");
+		a.eat();
+		a.sleep();
+	}
+
+}
+
+2.
+package inheritance2;
+public class Person {
+	private String name;
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+package inheritance2;
+public class Employee extends Person{
+	private double annualSalary;
+	private int year;
+	private String insuranceNumber;
+	public Employee(String name, double annualSalary, int year,String insuranceNumber) {
+		super(name);
+		this.annualSalary = annualSalary;
+		this.year = year;
+		this.insuranceNumber = insuranceNumber;
+	}
+	public double getAnnualSalary() {
+		return annualSalary;
+	}
+	public void setAnnualSalary(double annualSalary) {
+		this.annualSalary = annualSalary;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public String getInsuranceNumber() {
+		return insuranceNumber;
+	}
+	public void setInsuranceNumber(String insuranceNumber) {
+		this.insuranceNumber = insuranceNumber;
+	}
+}
+package inheritance2;
+public class TestEmployee {
+	public static void main(String[] args) {
+		Employee e=new Employee("Dhivya",70000.0,2017,"abcd45678");
+		System.out.println("Name : "+e.getName()+"\nSalary : "+e.getAnnualSalary()+"\nyear : "+e.getYear()+"\nInsurance number : "+
+				e.getInsuranceNumber());
+	}
+}

@@ -1,0 +1,162 @@
+1.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s=sc.next();
+		if(s.equals(new StringBuffer(s).reverse().toString())){
+			System.out.println("Palindrome");
+		}
+		else{
+			System.out.println("Not a Palindrome");
+		}
+	}
+}
+
+2.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		String s2=sc.next();
+		if ((s1.length() != 0)&&(s2.length() != 0)&&(s1.charAt(s1.length()-1))==(s2.charAt(0))){
+            System.out.println(s1.concat(s2.substring(1)).toLowerCase());
+		}
+		else{
+			System.out.println(s1.concat(s2).toLowerCase());
+		}
+	}
+}
+
+3.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		if(s1.length()<=1){
+			System.out.println(s1);
+		}
+		else{
+			String s2=s1.substring(0,2);
+			for(int i=0;i<s1.length();i++){
+				System.out.print(s2);
+			}
+		}
+	}
+}
+
+4.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		int len=s1.length();
+		if(len%2==0){
+			System.out.println(s1.substring(0,len/2));
+		}
+		else{
+			System.out.println("null");
+		}
+	}
+}
+
+5.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		System.out.println(s1.substring(1,s1.length()-1));
+	}
+}
+
+6.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		String s2=sc.next();
+		if(s1.length()<s2.length()){
+			System.out.println(s1+s2+s1);
+		}
+		else{
+			System.out.println(s2+s1+s2);
+		}
+	}
+}
+
+7.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.next();
+		if((s1.substring(0,1)).equals("x")&&(s1.substring(s1.length()-1)).equals("x")){
+			System.out.println(s1.substring(1,s1.length()-1));
+		}
+		else{
+			System.out.println(s1);
+		}
+	}
+}
+
+8.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+			Scanner sc=new Scanner(System.in);
+		 	String a=sc.next();
+		 	int c=a.indexOf('*');
+		 	System.out.print((a.charAt(c-2)));
+		 	System.out.print((a.charAt(c+2)));
+	}
+}
+
+9.import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+			Scanner sc=new Scanner(System.in);
+		 	String a=sc.next();
+	        String b=sc.next();
+	        String str = "";
+	        int len = 0;
+	        if (a.length() >= b.length())
+	        {
+	            len = a.length();
+	        } else
+	            len = b.length();
+
+	        for (int i = 0; i < len; i++)
+	        {
+	        	if (i < a.length())
+	            {
+	                str += a.charAt(i);
+	            }
+	            if (i < b.length())
+	            {
+	                str += b.charAt(i);
+	            }
+	        }
+	        System.out.println(str);
+		}
+}
+
+10.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+			Scanner sc=new Scanner(System.in);
+		 	String a=sc.next();
+	        int b=sc.nextInt();
+	        int len=a.length();
+	        len=len-b;
+	        for(int i=0;i<b;i++)
+	        {
+	            System.out.print(a.substring(len));
+	        }
+	}
+}

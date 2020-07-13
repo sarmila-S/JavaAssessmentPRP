@@ -1,0 +1,360 @@
+1.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int arr[]=new int[]{1,2,4,6,7};
+		int sum=0;
+		for(int i=0;i<arr.length;i++){
+			sum=sum+arr[i];
+		}
+		int average=sum/(arr.length);
+		System.out.println("Sum : "+sum);
+		System.out.println("Average : "+average);
+	}
+}
+
+2.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int arr[]=new int[]{1,2,4,6,7};
+		int min=Integer.MAX_VALUE;
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]<min){
+				min=arr[i];
+			}
+			else{
+			max=arr[i];
+			}
+		}
+		System.out.println("Min : "+min+"\n"+"Max : "+max);
+	}
+}
+
+3.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int arr[]=new int[]{1,4,34,56,7};
+		System.out.println("Enter Element to be searched : ");
+		int s=Integer.parseInt(args[0]);
+		int flag=0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==s){
+				flag=1;
+				System.out.println(i);
+				break;
+			}
+		}
+		if(flag==0)
+			System.out.println("-1");
+	}
+}
+
+4.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Array with ASCII values :");
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Corresponding Character values :");
+		for(int i=0;i<n;i++){
+			System.out.print((char)arr[i]+" ");
+		}
+	}
+}
+
+5.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+		int min1,min2;
+		min1=min2=Integer.MAX_VALUE;
+		int max1,max2;
+		max1=max2=Integer.MIN_VALUE;
+		for(int i=0;i<n;i++){
+			if(arr[i]<min1){
+				min2=min1;
+				min1=arr[i];
+			}
+			if(arr[i]<min2 && arr[i]!=min1){
+				min2=arr[i];
+			}
+			if(arr[i]>max1){
+				max2=max1;
+				max1=arr[i];
+			}
+			if(arr[i]>max2 && arr[i]!=max1){
+				max2=arr[i];
+			}
+		}
+		System.out.println("min1 :"+min1+" min2 :"+min2);
+		System.out.println("max1 :"+max1+" max2 :"+max2);
+	}
+}
+
+6.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		int temp=0;
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+			for(int j=i+1;j<n;j++){
+				if(arr[i]>arr[j]){
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+		for(int i=0;i<n;i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+}
+
+7.
+import java.util.*;
+public class A2 { 
+		public static void main(String args[]){
+			Scanner sc=new Scanner(System.in);
+			int n=sc.nextInt();
+			int arr[]=new int[n];
+			for(int i=0;i<n;i++){
+				arr[i]=sc.nextInt();
+			}
+			int temp=0;
+			for(int i=0;i<n;i++){
+				for(int j=i+1;j<n;j++){
+					if(arr[i]>arr[j]){
+						temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			int[] temp1 = new int[n];
+		    int j = 0;  
+		    for (int i=0; i<n-1; i++){  
+		    	if (arr[i] != arr[i+1]){  
+		    		temp1[j++] = arr[i];  
+		         }  
+		    } 
+		    temp1[j++] = arr[n-1]; 
+		    for (int i=0; i<j; i++){  
+		    	arr[i] = temp1[i];  
+		    }  
+		    for (int i=0; i<j; i++){
+		    	System.out.print(arr[i]+" ");
+		    }
+		}
+}
+
+8.
+import java.util.*;
+public class A2 { 
+		public static void main(String args[]){
+			Scanner sc=new Scanner(System.in);
+			int n=sc.nextInt();
+			int i6=0;
+			int i7=0;
+			int sum=0;
+			int arr[]=new int[n];
+			for(int i=0;i<n;i++){
+				arr[i]=sc.nextInt();
+				if(arr[i]==6)
+						i6=i;
+				if(arr[i]==7)
+						i7=i;
+			}
+			if(i6<i7){
+				for(int i=0;i<n;i++){
+					if(i<i6 || i>i7)
+							sum=sum+arr[i];
+				}
+			}
+			else{
+				for(int i=0;i<n;i++){
+					sum=sum+arr[i];
+				}
+			}
+			System.out.println(sum);
+		}
+}
+
+9.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		int arr[]=new int[args.length];
+		int temp=0;
+		for(int i=0;i<args.length;i++){
+			arr[i]=Integer.parseInt(args[i]);
+		}
+		for(int i=0;i<args.length;i++){
+			if(arr[i]==10){
+				arr[i]=0;
+			}
+			if(arr[i]!=0)
+					arr[temp++]=arr[i];
+		}
+		while(temp<args.length)
+			arr[temp++]=0;
+		for(int i=0;i<args.length;i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+}
+
+10.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		int arr[]=new int[args.length];
+		int j=-1,temp;
+		for(int i=0;i<args.length;i++){
+			arr[i]=Integer.parseInt(args[i]);
+		}
+		for(int i=0;i<args.length;i++){
+			if(arr[i]%2==0){
+				j++;
+                temp = arr[i]; 
+                arr[i] = arr[j]; 
+                arr[j] = temp; 
+			}
+		}
+		for(int i=0;i<args.length;i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+}
+
+11.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		int arr[]=new int[args.length];
+		int flag=0;
+		for(int i=0;i<args.length;i++){
+			arr[i]=Integer.parseInt(args[i]);
+			if(arr[i]==1 || arr[i]==4){
+				flag++;	
+			}
+		}
+		if(flag==args.length){
+			System.out.println("true");
+		}
+		else{
+			System.out.println("false");
+		}
+	}
+}
+
+12.
+import java.util.*;
+import java.math.*;
+public class A1 {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int[3];
+		int b[]=new int[3];
+		System.out.println("Enter a :");
+		for(int i=0;i<3;i++){
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Enter b :");
+		for(int i=0;i<3;i++){
+			b[i]=sc.nextInt();
+		}
+		int mid=(int) Math.ceil(3/2);
+		int c[]=new int[2];
+		c[0]=a[mid];
+		c[1]=b[mid];
+		System.out.print(c[0]+","+c[1]);
+	}
+}
+
+13.
+import java.util.*;
+import java.math.*;
+public class A1 {
+	public static void main(String[] args){
+		int a[][]=new int[2][2];
+		if(args.length<4){
+			System.out.println("Please enter 4 integer numbers");
+		}
+		if(args.length==4){
+		for(int i=0;i<2;i++){
+			for(int j=0;j<2;j++){
+				a[i][j]=Integer.parseInt(args[2*i+j]);
+			}
+		}
+		}
+		System.out.println("The given array is :");
+		for(int i=0;i<2;i++){
+			for(int j=0;j<2;j++){
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("The reverse of the array is :");
+		for(int i=1;i>=0;i--){
+			for(int j=1;j>=0;j--){
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+14.
+import java.util.*;
+import java.math.*;
+public class A1 {
+	public static void main(String[] args){
+		int a[][]=new int[3][3];
+		if(args.length<9){
+			System.out.println("Please enter 9 integer numbers");
+		}
+		if(args.length==9){
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				a[i][j]=Integer.parseInt(args[3*i+j]);
+			}
+		}
+		}
+		System.out.println("The given array is :");
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<3;i++){
+			for(int j=0;j<3;j++){
+				if(a[i][j]>max)
+						max=a[i][j];
+			}
+		}
+		System.out.println("The biggest number in the given array is "+max);
+	}
+}

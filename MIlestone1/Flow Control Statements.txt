@@ -1,0 +1,315 @@
+1.
+A)
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	int s1=Integer.parseInt(args[0]);
+    	if(s1>0){
+    		System.out.println("Positive");
+    	}else if(s1<0){
+    		System.out.println("Negative");
+    	}else{
+    		System.out.println("Zero");
+    	}
+    }
+}
+
+
+B)
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	int s1=Integer.parseInt(args[0]);
+    	int s2=Integer.parseInt(args[1]);
+    	if((s1%10)==(s2%10)){
+    		System.out.println("true");    	
+    	}
+	else{
+		System.out.println("false");
+	}
+    	System.out.println("s1="+s1%10);
+    	System.out.println("s2="+s2%10);
+	}
+}
+
+2.
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	int s1=Integer.parseInt(args[0]);
+    	if(s1%2==0)
+    	{
+    		System.out.println("Even");
+    	}
+    	else{
+    		System.out.println("Odd");
+    	}
+	}
+}
+
+3.
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	if(args.length==0){
+    		System.out.println("No Values");
+    	}
+    	else{
+    		for(int i=0;i<args.length;i++){
+    			System.out.print(args[i]+",");
+    		}
+    	}
+	}
+}
+
+4.
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	char c1=args[0].charAt(0);
+    	char c2=args[1].charAt(0);
+    	if(c1>c2){
+    		System.out.println(c2+","+c1);
+    	}
+    	else{
+    		System.out.println(c1+","+c2);
+    	}
+	}
+
+	
+}
+
+5.
+import java.util.*;
+public class A1{
+	public static void main(String[] args) {
+    	char c1=args[0].charAt(0);
+    	if((c1>=65 && c1<=90)||(c1>=97 && c1<=122)){
+    		System.out.println("Alphabet");
+    	}
+    	else if(c1>=48 && c1<=57){
+    		System.out.println("Digit");
+    	}
+    	else{
+    		System.out.println("Special Character");
+    		}
+    	}
+
+6.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args) {
+		String gender=args[0];
+		int age=Integer.parseInt(args[1]);
+		if(gender.equals("Female")&&(age>=1 && age<=58)){
+			System.out.println(" the percentage of interest is 8.2%");
+		}
+		else if(gender.equals("Female")&&(age>=59 && age<=100)){
+			System.out.println(" the percentage of interest is 9.2%");
+		}
+		else if(gender.equals("Male")&&(age>=1 && age<=58)){
+			System.out.println(" the percentage of interest is 8.4%");
+		}
+		else if(gender.equals("Male")&&(age>=59 && age<=100)){
+			System.out.println(" the percentage of interest is 10.5%");
+		}
+	}
+
+}
+
+7.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args) {
+		char c1=args[0].charAt(0);
+		if(c1>=65 && c1<=90){
+			int temp = (int) c1;
+			temp = temp + 32;
+        	c1 = (char) temp;
+        	System.out.println(c1);
+		}
+		else{
+			int temp = (int) c1;
+	        temp = temp - 32;
+	        c1 = (char) temp;
+			System.out.println(c1);
+		}
+	}
+
+}
+
+8.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args) {
+		char c1=args[0].charAt(0);
+		switch(c1){
+		case 'R':System.out.println("Red");
+			 break;
+		case 'B':System.out.println("Blue");
+		 	 break;
+		case 'G':System.out.println("Green");
+			 break;
+		case 'O':System.out.println("Orange");
+		 	 break;
+		case 'Y':System.out.println("Yellow");
+			 break;
+		case 'W':System.out.println("White");
+			 break;
+		default:System.out.println("Invalid Code");
+		}
+	}
+}
+
+9.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args) {
+		if(args.length==0){
+			System.out.println("Please enter the month in numbers");
+		}
+		else{
+			int number=Integer.parseInt(args[0]);
+			switch(number){
+			case 1:System.out.println("January");break;
+			case 2:System.out.println("February");break;
+			case 3:System.out.println("March");break;
+			case 4:System.out.println("April");break;
+			case 5:System.out.println("May");break;
+			case 6:System.out.println("June");break;
+			case 7:System.out.println("July");break;
+			case 8:System.out.println("August");break;
+			case 9:System.out.println("September");break;
+			case 10:System.out.println("October");break;
+			case 11:System.out.println("November");break;
+			case 12:System.out.println("December");break;
+			default:System.out.println("Invalid Month");
+			}
+		}
+	}
+}
+
+10.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		for(int i=1;i<=10;i++){
+			System.out.print(i+"\t");
+		}
+	}
+}
+
+11.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		for(int i=23;i<=57;i++){
+			if(i%2==0)
+				System.out.println(i);
+		}
+	}
+}
+
+12.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){
+		int n=Integer.parseInt(args[0]);
+		 int flag=0;              
+		  if(n==0||n==1){  
+		   System.out.println("not prime number");      
+		  }else{  
+		   for(int i=2;i<=n/2;i++){      
+		    if(n%i==0){      
+		     System.out.println("not prime number");      
+		     flag=1;      
+		     break;      
+		    }      
+		   }      
+		   if(flag==0){
+			   System.out.println("prime number"); }  
+		  }
+	}
+}
+
+13.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		   for(int i=10;i<=99;i++){   
+			   int flag=1;
+			   for(int j=2;j<=i/2;++j){
+				   if(i%j==0){           
+					   flag=0;      
+					   break;      
+				   }      
+			   } 
+		   if(flag==1){
+			   System.out.print(i+" "); 
+			  }  
+		   }
+		}
+}
+
+14.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		   int n=Integer.parseInt(args[0]);
+		   int sum;
+		   for(sum=0;n!=0;n/=10)
+		    {
+			sum+=n%10;
+		    }
+		   System.out.println(sum);
+	}
+}
+
+15.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int n=Integer.parseInt(args[0]);
+		for(int i=0;i<n;i++){
+			for(int j=0;j<=i;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}   
+	}
+}
+
+16.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int n=Integer.parseInt(args[0]);
+		int sum=0;
+		while(n!=0){
+			sum=n%10;
+			System.out.print(sum);
+			n=n/10;
+		}
+	}
+}
+17.
+import java.util.*;
+public class A1 {
+	public static void main(String[] args){            
+		int n=Integer.parseInt(args[0]);
+		int sum,rev=0;
+		int temp=n;
+		while(n!=0){
+			sum=n%10;
+			rev=rev*10+sum;
+			n=n/10;
+		}
+		if(temp==rev){
+			System.out.println("Palindrome");
+		}
+		else{
+			System.out.println("Not a Palindrome");
+		}
+	}
+}
+
